@@ -1,9 +1,5 @@
 {
     "name": "Custom DevContainer",
-    "build": {
-      "dockerfile": "Dockerfile",
-      "context": "."
-    },
     "customizations": {
       "vscode": {
         "settings": {
@@ -15,6 +11,11 @@
         ]
       }
     },
-    "postCreateCommand": "docker --version && kubectl version --client && skaffold version && node --version"
+    "postCreateCommand": [
+      "curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/v1.36.0/skaffold-linux-amd64 && chmod +x skaffold && mv skaffold /usr/local/bin/",
+      "kubectl version --client",
+      "skaffold version"
+    ]
+    //"postCreateCommand": "docker --version && kubectl version --client && skaffold version && node --version"
   }
   
