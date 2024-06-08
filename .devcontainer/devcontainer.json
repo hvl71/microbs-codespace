@@ -21,6 +21,8 @@
     // ]
 //    "postCreateCommand": "docker --version && kubectl version --client && skaffold version && node --version"
 //    "postCreateCommand": "echo 'Running postCreateCommand from devcontainer.json. See creation.log for details!'"  //works
-    "postCreateCommand": "pwd"
+//    "postCreateCommand": "pwd" //works
+    "postCreateCommand": "curl"
+      
   }
   
