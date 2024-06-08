@@ -11,12 +11,14 @@
         ]
       }
     },
-    // "postCreateCommand": [
-    //   "curl -Lo ~/skaffold https://storage.googleapis.com/skaffold/releases/v1.36.0/skaffold-linux-amd64 && chmod +x ~/skaffold",
-    //   "kubectl version --client",
-    //   "skaffold version"
-    // ]
+    "postCreateCommand": [
+      "echo 'Running postCreateCommand from devcontainer.json. See creation.log for details!'",
+      "pwd",  
+      "curl -Lo ~/skaffold https://storage.googleapis.com/skaffold/releases/v1.36.0/skaffold-linux-amd64 && chmod +x ~/skaffold",
+      "kubectl version --client",
+      "skaffold version"
+    ]
 //    "postCreateCommand": "docker --version && kubectl version --client && skaffold version && node --version"
-    "postCreateCommand": "echo 'this codespace IS WORKING!"
+//    "postCreateCommand": "echo 'this codespace IS WORKING!'"
   }
   
