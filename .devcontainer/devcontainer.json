@@ -17,6 +17,6 @@
     //   "skaffold version"
     // ]
 //    "postCreateCommand": "docker --version && kubectl version --client && skaffold version && node --version"
-    "postCreateCommand": "docker --version && kubectl version --client"
+    "postCreateCommand": "echo 'this codespace IS WORKING!"
   }
   
