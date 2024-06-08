@@ -12,7 +12,7 @@
       }
     },
     "postCreateCommand": [
-      "echo 'Running postCreateCommand from devcontainer.json. See creation.log for details!'",
+      "echo 'Running postCreateCommand from devcontainer.json. See creation.log for details!' > /dev/tty",
       "pwd",  
       "curl -Lo ~/skaffold https://storage.googleapis.com/skaffold/releases/v1.36.0/skaffold-linux-amd64 && chmod +x ~/skaffold",
       "kubectl version --client",
